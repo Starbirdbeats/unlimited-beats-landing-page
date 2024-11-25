@@ -7,6 +7,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from '@/components/ui/carousel';
+import Image from 'next/image';
 
 const testimonials = [
   {
@@ -51,7 +52,7 @@ export default function SocialProof() {
             {testimonials.map((testimonial, index) => (
               <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
                 <div className="bg-gray-800 rounded-lg p-6 text-center">
-                  <img
+                  <Image
                     src={testimonial.photo}
                     alt={testimonial.name}
                     className="w-24 h-24 rounded-full mx-auto mb-4"

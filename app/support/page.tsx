@@ -9,7 +9,7 @@ export default function Support() {
         <h2 className="section-title">Frequently Asked Questions</h2>
         <div className="section-content">
           <h3>How do I submit a beat request?</h3>
-          <p>Log into your account, navigate to the dashboard, and click "New Request". Follow the prompts to submit your reference tracks and requirements.</p>
+          <p>Log into your account, navigate to the dashboard, and click &quot;New Request&quot;. Follow the prompts to submit your reference tracks and requirements.</p>
           
           <h3>What if I need revisions?</h3>
           <p>Each beat comes with one free revision. Submit your revision request within 48 hours of delivery for fastest processing.</p>
