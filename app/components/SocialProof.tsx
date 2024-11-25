@@ -12,21 +12,21 @@ import Image from 'next/image';
 const testimonials = [
   {
     name: 'John Doe',
-    photo: '/placeholder.svg?height=100&width=100',
+    photo: '/api/placeholder/100/100', // Changed to use a proper placeholder URL
     quote:
       'The beats I get are always fire! The turnaround time is incredibly fast.',
     achievement: '1M+ Spotify Streams',
   },
   {
     name: 'Jane Smith',
-    photo: '/placeholder.svg?height=100&width=100',
+    photo: '/api/placeholder/100/100', // Changed to use a proper placeholder URL
     quote:
       'The quality and creativity of the beats are top-notch. Highly recommended!',
     achievement: 'Billboard Hot 100 Artist',
   },
   {
     name: 'Mike Johnson',
-    photo: '/placeholder.svg?height=100&width=100',
+    photo: '/api/placeholder/100/100', // Changed to use a proper placeholder URL
     quote:
       "I love how they match my style perfectly. It's like they read my mind!",
     achievement: '500K+ YouTube Subscribers',
@@ -52,12 +52,18 @@ export default function SocialProof() {
             {testimonials.map((testimonial, index) => (
               <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
                 <div className="bg-gray-800 rounded-lg p-6 text-center">
-                  <Image
-                    src={testimonial.photo}
-                    alt={testimonial.name}
-                    className="w-24 h-24 rounded-full mx-auto mb-4"
-                  />
-                  <p className="text-lg mb-4">&quot;{testimonial.quote}&quot;</p>
+                  <div className="relative w-24 h-24 mx-auto mb-4">
+                    <Image
+                      src={testimonial.photo}
+                      alt={testimonial.name}
+                      fill
+                      className="rounded-full object-cover"
+                      sizes="(max-width: 96px) 100vw, 96px"
+                    />
+                  </div>
+                  <p className="text-lg mb-4">
+                    &quot;{testimonial.quote}&quot;
+                  </p>
                   <p className="font-semibold">{testimonial.name}</p>
                   <p className="text-sm text-gray-400">
                     {testimonial.achievement}
