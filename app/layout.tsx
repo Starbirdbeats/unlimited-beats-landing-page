@@ -14,6 +14,7 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://unlimited-beats.vercel.app'), // Updaet when I get a domain
   title: {
     default: 'Unlimited Beats | Professional Beat Making Services',
     template: '%s | Unlimited Beats',
