@@ -1,0 +1,82 @@
+:root {
+  --color-dark: #0D1B2A;
+  --color-navy: #1B263B;
+  --color-steel: #415A77;
+  --color-blue-gray: #778DA9;
+  --color-light: #E0E1DD;
+}
+
+.page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  color: var(--color-light);
+  background-color: var(--color-dark);
+  min-height: 100vh;
+}
+
+.page-title {
+  color: var(--color-light);
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid var(--color-steel);
+  padding-bottom: 1rem;
+}
+
+.page-section {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background-color: var(--color-navy);
+  border-radius: 8px;
+}
+
+.section-title {
+  color: var(--color-blue-gray);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.section-content {
+  line-height: 1.6;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 600px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-label {
+  color: var(--color-blue-gray);
+}
+
+.form-input,
+.form-textarea {
+  padding: 0.75rem;
+  border: 1px solid var(--color-steel);
+  border-radius: 4px;
+  background-color: var(--color-navy);
+  color: var(--color-light);
+}
+
+.form-button {
+  padding: 0.75rem 1.5rem;
+  background-color: var(--color-steel);
+  color: var(--color-light);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form-button:hover {
+  background-color: var(--color-blue-gray);
+}
+
